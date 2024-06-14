@@ -1,0 +1,138 @@
+/* Project Name: Front End Developer Dynamic Skills Test V2 */
+/* Git URL: https://github.com/ajaygorecha/Front-End-Developer-Dynamic-Skills-Test.git */
+/* Develop by: Ajay Gorecha */
+/* Developer URL: https://www.ajaygorecha.com/ */
+/* Design System Colors */
+*, *, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+::-moz-selection {
+  background-color: #01F0D0;
+  color: #fff;
+}
+
+::selection {
+  background-color: #01F0D0;
+  color: #fff;
+}
+
+html, body {
+  font-family: "Manrope", sans-serif !important;
+  font-weight: 400;
+  scroll-behavior: smooth;
+  background-color: #F6F7F8;
+}
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden !important;
+  }
+}
+
+html.nprogress-busy {
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+div, header, nav, footer, section, aside, article {
+  display: block;
+}
+
+a {
+  color: #01F0D0;
+  text-decoration: none;
+  transition: all 0.05s ease-in !important;
+}
+a:hover {
+  text-decoration: none !important;
+  color: #072635;
+}
+
+p {
+  font-size: 16px;
+  color: #707070;
+  font-weight: 400;
+}
+@media (max-width: 576px) {
+  p {
+    font-size: 14px;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style-type: none;
+  font-size: 16px;
+  position: relative;
+}
+
+img {
+  width: 100%;
+}
+
+hr {
+  border-color: #F6F7F8;
+  opacity: 1;
+}
+
+/* Main CSS */
+header {
+  padding: 18px;
+}
+header .nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 12px 32px;
+}
+header .menus ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+header .menus ul li > a {
+  display: flex;
+}
+header .menus ul img {
+  width: 18px;
+}
+header .user-details {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+header .user-details .user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-right: 1px solid #EDEDED;
+  padding-right: 8px;
+}
+header .user-details .user img {
+  max-width: 44px;
+}
+header .user-details .user p {
+  margin: 0;
+  color: #072635;
+  font-weight: bold;
+  font-size: 14px;
+}
+header .user-details .user span {
+  color: #707070;
+  font-size: 14px;
+}
+header .user-details .settings ul {
+  display: flex;
+}/*# sourceMappingURL=style.css.map */
