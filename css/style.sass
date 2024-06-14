@@ -1,5 +1,7 @@
-/* Project Name: Front End Developer Dynamic Skills Test V2 */
+/* Task Name: Front End Developer Dynamic Skills Test V2 */
+/* Task Given By: Coalition Technologies */
 /* Git URL: https://github.com/ajaygorecha/Front-End-Developer-Dynamic-Skills-Test.git */
+/* Vercel Deployment URL: https://front-end-developer-dynamic-skills-test.vercel.app/ */
 /* Develop by: Ajay Gorecha */
 /* Developer URL: https://www.ajaygorecha.com/ */
 
@@ -39,6 +41,17 @@ $warningLight: #FFFAE6
     background-color: $primaryColor
     color: $whiteColor
 
+::-webkit-scrollbar
+    width: 6px
+
+::-webkit-scrollbar-track
+    background-color: $borderColor
+    border-radius: 10px
+
+::-webkit-scrollbar-thumb
+    background: $secoundyColor
+    border-radius: 10px
+
 html,body
     font-family: $font !important
     font-weight: 400
@@ -46,9 +59,6 @@ html,body
     background-color: $baseColor
     @media (max-width: 768px)
         overflow-x: hidden !important
-
-html.nprogress-busy
-    overflow: hidden
 
 h1,h2,h3,h4,h5,h6
     font-weight: 700
@@ -86,6 +96,37 @@ hr
     border-color: $baseColor
     opacity: 1
 
+/* Bootstrap Reset */
+.btn-primary
+    background-color: $primaryColor
+    border-color: $primaryColor
+    border-radius: 24px
+    color: $secoundyColor
+    font-weight: bold
+    padding: 8px 10px
+    min-width: 200px
+    &:hover
+        background-color: $secoundyColor
+        border-color: $secoundyColor
+
+.card
+    border-radius: 16px
+    border: none
+    background-color: $whiteColor
+    .card-header
+        background-color: $whiteColor
+        border: none
+        border-radius: 16px 16px 0 0 
+        padding: 20px 20px 0 20px
+        display: flex
+        justify-content: space-between
+        h1,h2,h3,h4,h5,h6
+            font-size: 24px
+            color: $secoundyColor
+            font-weight: 800
+    .card-body
+        padding: 20px
+
 /* Main CSS */
 header
     padding: 18px
@@ -95,16 +136,26 @@ header
         justify-content: space-between
         background-color: $whiteColor
         border-radius: 50px
-        padding: 12px 32px
+        padding: 16px 32px
     .menus
         ul
             display: flex
             align-items: center
-            gap: 32px
+            gap: 8px
+            li.active
+                a
+                    background-color: $primaryColor
             li > a
                 display: flex
+                gap: 8px
+                color: $secoundyColor
+                font-weight: bold
+                padding: 10px 16px
+                border-radius: 24px
+                &:hover
+                    background-color: $primaryColor
             img
-                width: 18px
+                width: 20px
     .user-details
         display: flex
         align-items: center
@@ -114,7 +165,7 @@ header
             align-items: center
             gap: 8px
             border-right: 1px solid $borderColor
-            padding-right: 8px
+            padding-right: 12px
             img
                 max-width: 44px
             p
@@ -122,9 +173,99 @@ header
                 color: $secoundyColor
                 font-weight: bold
                 font-size: 14px
+                line-height: 16px
             span
                 color: $pColor
                 font-size: 14px
+                line-height: 16px
         .settings
             ul
                 display: flex
+
+main
+    padding: 0 18px 18px 18px
+    display: flex
+    gap: 30px
+    justify-content: space-between
+    .section-wrapper
+        width: calc( 100% - 400px )
+        .patients-wrapper
+            background-color: $whiteColor
+            border-radius: 16px
+            width: 370px
+            height: 100%
+            .card-header
+                img
+                    width: 24px
+    .sidebar-wrapper
+        width: 370px
+        display: flex
+        flex-direction: column
+        gap: 30px
+        .user-info
+            background-color: $whiteColor
+            border-radius: 16px
+            padding: 32px 20px
+            .thumb
+                text-align: center
+                margin-bottom: 32px
+                img
+                    width: 200px
+                    height: 200px
+                    object-fit: cover
+                    object-position: center
+                    border-radius: 50%
+                    margin-bottom: 24px
+                h1,h2,h3,h4,h5,h6
+                    font-size: 24px
+                    color: $secoundyColor
+                    margin: 0
+        .personal-info
+            margin-bottom: 40px
+            ul
+                display: flex
+                flex-direction: column
+                gap: 24px
+                li
+                    display: flex
+                    gap: 16px
+                    align-items: center
+                    span
+                        color: $secoundyColor
+                        font-size: 14px
+                    p
+                        margin: 0
+                        font-weight: bold
+                        color: $secoundyColor
+                    .icon
+                        width: 42px
+                        height: 42px
+                        display: grid
+                        place-content: center
+                        background-color: $baseColor
+                        border-radius: 50%
+                        img
+                            width: 100%
+                            height: 100%
+        .lab-wrapper
+            .card-body
+                ul
+                    display: flex
+                    flex-direction: column
+                    height: 250px
+                    overflow-y: scroll
+                    overflow-x: hidden
+                    button
+                        width: 100%
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+                        padding: 10px 16px
+                        font-size: 13px
+                        color: $secoundyColor
+                        border: none
+                        background-color: transparent
+                        &:hover
+                            background-color: $baseColor
+                        img
+                            width: 20px

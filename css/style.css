@@ -1,5 +1,7 @@
-/* Project Name: Front End Developer Dynamic Skills Test V2 */
+/* Task Name: Front End Developer Dynamic Skills Test V2 */
+/* Task Given By: Coalition Technologies */
 /* Git URL: https://github.com/ajaygorecha/Front-End-Developer-Dynamic-Skills-Test.git */
+/* Vercel Deployment URL: https://front-end-developer-dynamic-skills-test.vercel.app/ */
 /* Develop by: Ajay Gorecha */
 /* Developer URL: https://www.ajaygorecha.com/ */
 /* Design System Colors */
@@ -21,6 +23,20 @@
   color: #fff;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #EDEDED;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #072635;
+  border-radius: 10px;
+}
+
 html, body {
   font-family: "Manrope", sans-serif !important;
   font-weight: 400;
@@ -31,10 +47,6 @@ html, body {
   html, body {
     overflow-x: hidden !important;
   }
-}
-
-html.nprogress-busy {
-  overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -85,6 +97,43 @@ hr {
   opacity: 1;
 }
 
+/* Bootstrap Reset */
+.btn-primary {
+  background-color: #01F0D0;
+  border-color: #01F0D0;
+  border-radius: 24px;
+  color: #072635;
+  font-weight: bold;
+  padding: 8px 10px;
+  min-width: 200px;
+}
+.btn-primary:hover {
+  background-color: #072635;
+  border-color: #072635;
+}
+
+.card {
+  border-radius: 16px;
+  border: none;
+  background-color: #fff;
+}
+.card .card-header {
+  background-color: #fff;
+  border: none;
+  border-radius: 16px 16px 0 0;
+  padding: 20px 20px 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.card .card-header h1, .card .card-header h2, .card .card-header h3, .card .card-header h4, .card .card-header h5, .card .card-header h6 {
+  font-size: 24px;
+  color: #072635;
+  font-weight: 800;
+}
+.card .card-body {
+  padding: 20px;
+}
+
 /* Main CSS */
 header {
   padding: 18px;
@@ -95,18 +144,29 @@ header .nav-bar {
   justify-content: space-between;
   background-color: #fff;
   border-radius: 50px;
-  padding: 12px 32px;
+  padding: 16px 32px;
 }
 header .menus ul {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 8px;
+}
+header .menus ul li.active a {
+  background-color: #01F0D0;
 }
 header .menus ul li > a {
   display: flex;
+  gap: 8px;
+  color: #072635;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 24px;
+}
+header .menus ul li > a:hover {
+  background-color: #01F0D0;
 }
 header .menus ul img {
-  width: 18px;
+  width: 20px;
 }
 header .user-details {
   display: flex;
@@ -118,7 +178,7 @@ header .user-details .user {
   align-items: center;
   gap: 8px;
   border-right: 1px solid #EDEDED;
-  padding-right: 8px;
+  padding-right: 12px;
 }
 header .user-details .user img {
   max-width: 44px;
@@ -128,11 +188,120 @@ header .user-details .user p {
   color: #072635;
   font-weight: bold;
   font-size: 14px;
+  line-height: 16px;
 }
 header .user-details .user span {
   color: #707070;
   font-size: 14px;
+  line-height: 16px;
 }
 header .user-details .settings ul {
   display: flex;
+}
+
+main {
+  padding: 0 18px 18px 18px;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+main .section-wrapper {
+  width: calc(100% - 400px);
+}
+main .section-wrapper .patients-wrapper {
+  background-color: #fff;
+  border-radius: 16px;
+  width: 370px;
+  height: 100%;
+}
+main .section-wrapper .patients-wrapper .card-header img {
+  width: 24px;
+}
+main .sidebar-wrapper {
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+main .sidebar-wrapper .user-info {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 32px 20px;
+}
+main .sidebar-wrapper .user-info .thumb {
+  text-align: center;
+  margin-bottom: 32px;
+}
+main .sidebar-wrapper .user-info .thumb img {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
+main .sidebar-wrapper .user-info .thumb h1, main .sidebar-wrapper .user-info .thumb h2, main .sidebar-wrapper .user-info .thumb h3, main .sidebar-wrapper .user-info .thumb h4, main .sidebar-wrapper .user-info .thumb h5, main .sidebar-wrapper .user-info .thumb h6 {
+  font-size: 24px;
+  color: #072635;
+  margin: 0;
+}
+main .sidebar-wrapper .personal-info {
+  margin-bottom: 40px;
+}
+main .sidebar-wrapper .personal-info ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+main .sidebar-wrapper .personal-info ul li {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+main .sidebar-wrapper .personal-info ul li span {
+  color: #072635;
+  font-size: 14px;
+}
+main .sidebar-wrapper .personal-info ul li p {
+  margin: 0;
+  font-weight: bold;
+  color: #072635;
+}
+main .sidebar-wrapper .personal-info ul li .icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-content: center;
+  background-color: #F6F7F8;
+  border-radius: 50%;
+}
+main .sidebar-wrapper .personal-info ul li .icon img {
+  width: 100%;
+  height: 100%;
+}
+main .sidebar-wrapper .lab-wrapper .card-body ul {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+main .sidebar-wrapper .lab-wrapper .card-body ul button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  font-size: 13px;
+  color: #072635;
+  border: none;
+  background-color: transparent;
+}
+main .sidebar-wrapper .lab-wrapper .card-body ul button:hover {
+  background-color: #F6F7F8;
+}
+main .sidebar-wrapper .lab-wrapper .card-body ul button img {
+  width: 20px;
 }/*# sourceMappingURL=style.css.map */
