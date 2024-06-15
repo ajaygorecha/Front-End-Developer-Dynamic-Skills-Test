@@ -207,6 +207,176 @@ main {
 }
 main .section-wrapper {
   width: calc(100% - 400px);
+  margin-top: 14px;
+  display: flex;
+  gap: 30px;
+}
+main .section-wrapper .diagnosis-wrapper {
+  width: calc(100% - 400px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 18px;
+}
+main .section-wrapper .diagnosis-wrapper .chart-body {
+  background-color: #F4F0FE;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+main .section-wrapper .diagnosis-wrapper .chart-body .chart-details {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+main .section-wrapper .diagnosis-wrapper .chart-body .chart-details .box {
+  padding: 20px 0;
+  width: 100%;
+}
+main .section-wrapper .diagnosis-wrapper .chart-body .chart-details .box h2 {
+  font-size: 22px;
+  color: #072635;
+  margin-top: 8px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+main .section-wrapper .diagnosis-wrapper .chart-body .chart-details .box span {
+  display: flex;
+  font-size: 14px;
+  color: #072635;
+}
+main .section-wrapper .diagnosis-wrapper .chart-body .chart-details .box span img {
+  width: 20px;
+}
+main .section-wrapper .diagnosis-wrapper .chart-body .chart-details .box p {
+  margin: 0;
+  padding-left: 18px;
+  color: #072635;
+  font-size: 14px;
+  font-weight: bold;
+}
+main .section-wrapper .diagnosis-wrapper .chart-body .chart-details .box p::before {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  content: "";
+  left: 0;
+  top: 3px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+main .section-wrapper .diagnosis-wrapper .chart-body .chart-details .box.systolic {
+  border-bottom: 1px solid #CBC8D4;
+}
+main .section-wrapper .diagnosis-wrapper .chart-body .chart-details .box.systolic p::before {
+  background-color: #E66FD2;
+}
+main .section-wrapper .diagnosis-wrapper .chart-body .chart-details .box.diastolic p::before {
+  background-color: #8C6FE6;
+}
+main .section-wrapper .diagnosis-wrapper .chart-body .canvas-item {
+  width: calc(100% - 250px);
+}
+main .section-wrapper .diagnosis-wrapper .chart-body .canvas-item canvas {
+  width: 100%;
+  max-height: 330px;
+}
+main .section-wrapper .diagnosis-wrapper .chart-body .canvas-ittle {
+  display: flex;
+  justify-content: space-between;
+}
+main .section-wrapper .diagnosis-wrapper .chart-body .canvas-ittle h2 {
+  font-size: 18px;
+  color: #072635;
+}
+main .section-wrapper .diagnosis-wrapper .chart-body .canvas-ittle .dropdown p {
+  margin: 0;
+  color: #072635;
+  font-size: 14px;
+}
+main .section-wrapper .diagnosis-wrapper .chart-body .canvas-ittle .dropdown img {
+  width: 25px;
+  margin-left: 16px;
+}
+main .section-wrapper .diagnosis-wrapper .diagnostic-list-wrapper {
+  width: 100%;
+}
+main .section-wrapper .diagnosis-wrapper .diagnostic-list-wrapper table {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  height: 170px;
+  overflow-y: scroll;
+}
+main .section-wrapper .diagnosis-wrapper .diagnostic-list-wrapper table thead th {
+  min-width: 150px;
+  background-color: #F6F7F8;
+  border: 0;
+  padding: 16px;
+}
+main .section-wrapper .diagnosis-wrapper .diagnostic-list-wrapper table thead th:nth-child(1) {
+  border-radius: 30px 0 0 30px;
+  min-width: 200px;
+}
+main .section-wrapper .diagnosis-wrapper .diagnostic-list-wrapper table thead th:nth-child(2) {
+  min-width: 500px;
+}
+main .section-wrapper .diagnosis-wrapper .diagnostic-list-wrapper table thead th:nth-child(3) {
+  border-radius: 0 30px 30px 0;
+}
+main .section-wrapper .diagnosis-wrapper .diagnostic-list-wrapper table tbody td {
+  vertical-align: middle;
+  padding: 10px;
+  border-color: #F6F7F8;
+}
+main .section-wrapper .diagnosis-wrapper .diagnostic-list-wrapper table tbody td:nth-child(3) {
+  max-width: 80px;
+}
+main .section-wrapper .diagnosis-wrapper .respiratory-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+main .section-wrapper .diagnosis-wrapper .respiratory-wrapper .icon-wrapper {
+  width: 100%;
+  border-radius: 12px;
+  padding: 16px;
+  min-height: 250px;
+}
+main .section-wrapper .diagnosis-wrapper .respiratory-wrapper .icon-wrapper img {
+  width: 96px;
+  margin-bottom: 16px;
+}
+main .section-wrapper .diagnosis-wrapper .respiratory-wrapper .icon-wrapper p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #072635;
+  margin-bottom: 0;
+}
+main .section-wrapper .diagnosis-wrapper .respiratory-wrapper .icon-wrapper h3 {
+  font-size: 30px;
+  color: #072635;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+main .section-wrapper .diagnosis-wrapper .respiratory-wrapper .icon-wrapper span {
+  display: flex;
+  align-items: self-start;
+}
+main .section-wrapper .diagnosis-wrapper .respiratory-wrapper .icon-wrapper span img {
+  width: 20px;
+}
+main .section-wrapper .diagnosis-wrapper .respiratory-wrapper .icon-wrapper:nth-child(1) {
+  background-color: #E0F3FA;
+}
+main .section-wrapper .diagnosis-wrapper .respiratory-wrapper .icon-wrapper:nth-child(2) {
+  background-color: #FFE6E9;
+}
+main .section-wrapper .diagnosis-wrapper .respiratory-wrapper .icon-wrapper:nth-child(3) {
+  background-color: #FFE6F1;
 }
 main .section-wrapper .patients-wrapper {
   background-color: #fff;
@@ -216,6 +386,38 @@ main .section-wrapper .patients-wrapper {
 }
 main .section-wrapper .patients-wrapper .card-header img {
   width: 24px;
+}
+main .section-wrapper .patients-wrapper .card-body {
+  padding-left: 0;
+  padding-right: 5px;
+}
+main .section-wrapper .patients-wrapper .patients-list {
+  display: flex;
+  flex-direction: column;
+  max-height: 1050px;
+  overflow-y: scroll;
+}
+main .section-wrapper .patients-wrapper .patients-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+}
+main .section-wrapper .patients-wrapper .patients-list li:hover {
+  background-color: #D8FCF7;
+}
+main .section-wrapper .patients-wrapper .patients-list li img {
+  max-width: 48px;
+}
+main .section-wrapper .patients-wrapper .patients-list li .patients-name {
+  margin-bottom: 0;
+  font-weight: bold;
+  color: #072635;
+  font-size: 14px;
+}
+main .section-wrapper .patients-wrapper .patients-list li .patients-age {
+  color: #707070;
+  font-size: 14px;
 }
 main .sidebar-wrapper {
   width: 370px;

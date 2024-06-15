@@ -99,18 +99,89 @@
                         <img src="images/icons/search.svg" alt="">
                     </div>
                     <div class="card-body">
-                        <ul>
-                            
-                        </ul>
+                        <ul class="patients-list" id="patients-list"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="diagnosis-wrapper">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Diagnosis History</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-body">
+                            <div class="canvas-item">
+                                <div class="canvas-ittle">
+                                    <h2>Blood Pressure</h2>
+                                    <div class="dropdown">
+                                        <p>Last 6 months <img src="images/icons/arrow-down.svg" alt=""> </p>
+                                    </div>
+                                </div>
+                                <canvas id="bloodPressure"></canvas>
+                            </div>
+                            <div class="chart-details">
+                                <div class="box systolic">
+                                    <p>Systolic</p>
+                                    <h2>160</h2>
+                                    <span><img src="images/icons/arrow-up-filled.svg" alt=""> Higher than Average</span>
+                                </div>
+                                <div class="box diastolic">
+                                    <p>Diastolic</p>
+                                    <h2>78</h2>
+                                    <span><img src="images/icons/arrow-down-filled.svg" alt=""> Lower than Average</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="respiratory-wrapper">
+                        <div class="icon-wrapper">
+                            <img src="images/illustrators/respiratory-rate.svg" alt="">
+                            <p>Respiratory Rate</p>
+                            <h3 id="respiratory-rate">20 bpm</h3>
+                            <span id="respiratory-staus">Normal</span>
+                        </div>
+                        <div class="icon-wrapper">
+                            <img src="images/illustrators/temperature.svg" alt="">
+                            <p>Temperature</p>
+                            <h3 id="respiratory-rate">98.6°F</h3>
+                            <span id="respiratory-staus">Normal</span>
+                        </div>
+                        <div class="icon-wrapper">
+                            <img src="images/illustrators/heart-bpm.svg" alt="">
+                            <p>Heart Rate</p>
+                            <h3 id="respiratory-rate">78 bpm</h3>
+                            <span id="respiratory-staus"><img src="images/icons/arrow-down-filled.svg" alt=""> Lower than Average</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="diagnostic-list-wrapper">
+                    <div class="card">
+                        <div class="card-header">
+                            <h1>Diagnostic List</h1>
+                        </div>
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Problem/Diagnosis</th>
+                                        <th>Description</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="userDiagnosticTest"></tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        
         <aside class="sidebar-wrapper">
             <div class="user-info">
                 <div class="thumb">
                     <img src="images/profile/jessica-taylor.png" alt="Jessica Taylor">
-                    <h3 class="name">Jessica Taylor</h3>
+                    <h3 class="name" id="user-name"></h3>
                 </div>
                 <div class="personal-info">
                     <ul>
@@ -120,7 +191,7 @@
                             </div>
                             <div>
                                 <span>Date Of Birth</span>
-                                <p>August 23, 1996</p>
+                                <p id="user-dob"></p>
                             </div>
                         </li>
                         <li>
@@ -129,7 +200,7 @@
                             </div>
                             <div>
                                 <span>Gender</span>
-                                <p>Female</p>
+                                <p id="user-gender"></p>
                             </div>
                         </li>
                         <li>
@@ -138,7 +209,7 @@
                             </div>
                             <div>
                                 <span>Contact Info.</span>
-                                <p>(415) 555-1234</p>
+                                <p id="user-number"></p>
                             </div>
                         </li>
                         <li>
@@ -147,7 +218,7 @@
                             </div>
                             <div>
                                 <span>Emergency Contacts</span>
-                                <p>(415) 555-5678</p>
+                                <p id="user-emergency-number"></p>
                             </div>
                         </li>
                         <li>
@@ -156,7 +227,7 @@
                             </div>
                             <div>
                                 <span>Insurance Provider</span>
-                                <p>Sunrise Health Assurance</p>
+                                <p id="user-insurance"></p>
                             </div>
                         </li>
                     </ul>
@@ -172,72 +243,19 @@
                     </div>
                     <div class="card-body">
                         <ul>
-                            <li>
-                                <button>
-                                    <span>Blood Tests</span>
-                                    <img src="images/icons/download.svg" alt="">
-                                </button>
-                            </li>
-                            <li>
-                                <button>
-                                    <span>CT Scans</span>
-                                    <img src="images/icons/download.svg" alt="">
-                                </button>
-                            </li>
-                            <li>
-                                <button>
-                                    <span>Radiology Reports</span>
-                                    <img src="images/icons/download.svg" alt="">
-                                </button>
-                            </li>
-                            <li>
-                                <button>
-                                    <span>X-Rays</span>
-                                    <img src="images/icons/download.svg" alt="">
-                                </button>
-                            </li>
-                            <li>
-                                <button>
-                                    <span>Urine Test</span>
-                                    <img src="images/icons/download.svg" alt="">
-                                </button>
-                            </li>
-                            <li>
-                                <button>
-                                    <span>Blood Tests</span>
-                                    <img src="images/icons/download.svg" alt="">
-                                </button>
-                            </li>
-                            <li>
-                                <button>
-                                    <span>CT Scans</span>
-                                    <img src="images/icons/download.svg" alt="">
-                                </button>
-                            </li>
-                            <li>
-                                <button>
-                                    <span>Radiology Reports</span>
-                                    <img src="images/icons/download.svg" alt="">
-                                </button>
-                            </li>
-                            <li>
-                                <button>
-                                    <span>X-Rays</span>
-                                    <img src="images/icons/download.svg" alt="">
-                                </button>
-                            </li>
-                            <li>
-                                <button>
-                                    <span>Urine Test</span>
-                                    <img src="images/icons/download.svg" alt="">
-                                </button>
-                            </li>
+                            <li id="user-lab-result"></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </aside>
     </main>
+
+    <!-- Chart JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Getting data using API & Chart JS -->
+     <script src="js/script.js"></script>
     
 </body>
 </html>

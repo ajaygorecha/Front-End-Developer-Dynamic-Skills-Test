@@ -24,6 +24,7 @@ $danger: #FF3B2F
 $success: #29C940
 $warning: #FFAB00
 
+$primaryLight: #D8FCF7
 $infoLight: #DEEBFF
 $dangerLight: #FFEBE6
 $successLight: #E3FCEF
@@ -189,6 +190,146 @@ main
     justify-content: space-between
     .section-wrapper
         width: calc( 100% - 400px )
+        margin-top: 14px
+        display: flex
+        gap: 30px
+        .diagnosis-wrapper
+            width: calc( 100% - 400px )
+            display: flex
+            flex-direction: column
+            gap: 20px
+            border-radius: 18px
+            .chart-body
+                background-color: #F4F0FE
+                padding: 20px
+                border-radius: 12px
+                display: flex
+                gap: 30px
+                justify-content: space-between
+                .chart-details
+                    display: flex
+                    flex-direction: column
+                    width: 250px
+                    .box
+                        padding: 20px 0
+                        width: 100%
+                        h2
+                            font-size: 22px
+                            color: $secoundyColor
+                            margin-top: 8px
+                            font-weight: bold
+                            margin-bottom: 8px
+                        span
+                            display: flex
+                            font-size: 14px
+                            color: $secoundyColor
+                            img
+                                width: 20px
+                        p
+                            margin: 0
+                            padding-left: 18px
+                            color: $secoundyColor
+                            font-size: 14px
+                            font-weight: bold
+                            &::before
+                                position: absolute
+                                width: 14px
+                                height: 14px
+                                content: ''
+                                left: 0
+                                top: 3px
+                                border-radius: 50%
+                                border: 1px solid $whiteColor
+                    .box.systolic
+                        border-bottom: 1px solid #CBC8D4
+                        p
+                            &::before
+                                background-color: #E66FD2
+                    .box.diastolic
+                        p
+                            &::before
+                                background-color: #8C6FE6
+                .canvas-item
+                    width: calc( 100% - 250px )
+                    canvas
+                        width: 100%
+                        max-height: 330px
+                .canvas-ittle
+                    display: flex
+                    justify-content: space-between
+                    h2
+                        font-size: 18px
+                        color: $secoundyColor
+                    .dropdown
+                        p
+                            margin: 0
+                            color: $secoundyColor
+                            font-size: 14px
+                        img
+                            width: 25px
+                            margin-left: 16px
+            .diagnostic-list-wrapper
+                width: 100%
+                table
+                    display: block
+                    width: 100%
+                    margin-top: 20px
+                    height: 170px
+                    overflow-y: scroll
+                    thead
+                        th
+                            min-width: 150px
+                            background-color: $baseColor
+                            border: 0
+                            padding: 16px
+                            &:nth-child(1)
+                                border-radius: 30px 0 0 30px
+                                min-width: 200px
+                            &:nth-child(2)
+                                min-width: 500px
+                            &:nth-child(3)
+                                border-radius: 0 30px 30px 0
+                    tbody
+                        td
+                            vertical-align: middle
+                            padding: 10px
+                            border-color: $baseColor
+                            &:nth-child(3)
+                                max-width: 80px
+            .respiratory-wrapper
+                display: flex
+                justify-content: space-between
+                gap: 20px
+                padding: 20px 
+                .icon-wrapper
+                    width: 100%
+                    border-radius: 12px
+                    padding: 16px
+                    min-height: 250px
+                    img
+                        width: 96px
+                        margin-bottom: 16px
+                    p
+                        font-size: 16px
+                        font-weight: 500
+                        color: $secoundyColor
+                        margin-bottom: 0
+                    h3
+                        font-size: 30px
+                        color: $secoundyColor
+                        font-weight: 800
+                        margin-bottom: 18px
+                    span
+                        display: flex
+                        align-items: self-start
+                        img
+                            width: 20px
+                    &:nth-child(1)
+                        background-color: #E0F3FA
+                    &:nth-child(2)
+                        background-color: #FFE6E9
+                    &:nth-child(3)
+                        background-color: #FFE6F1
         .patients-wrapper
             background-color: $whiteColor
             border-radius: 16px
@@ -197,6 +338,32 @@ main
             .card-header
                 img
                     width: 24px
+
+            .card-body
+                padding-left: 0
+                padding-right: 5px
+            .patients-list
+                display: flex
+                flex-direction: column
+                max-height: 1050px
+                overflow-y: scroll
+                li
+                    display: flex
+                    align-items: center
+                    gap: 12px
+                    padding: 16px 20px
+                    &:hover
+                        background-color: $primaryLight
+                    img
+                        max-width: 48px
+                    .patients-name
+                        margin-bottom: 0
+                        font-weight: bold
+                        color: $secoundyColor
+                        font-size: 14px
+                    .patients-age
+                        color: $pColor
+                        font-size: 14px
     .sidebar-wrapper
         width: 370px
         display: flex
@@ -269,3 +436,4 @@ main
                             background-color: $baseColor
                         img
                             width: 20px
+        
